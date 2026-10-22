@@ -11,3 +11,9 @@ target/
 /craft-fonts
 *.log
 __pycache__/
+
+packaging/android/.gradle/
+packaging/android/app/build/
+packaging/android/local.properties
+*.apk
+
