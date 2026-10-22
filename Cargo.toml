@@ -1,7 +1,7 @@
 [workspace]
 resolver = "3"
 members = ["crates/*", "apps/*", "xtask"]
-default-members = ["crates/*", "apps/photocraft", "apps/photocraft-cli", "xtask"]
+default-members = ["crates/*", "apps/photocraft", "apps/photocraft-android", "apps/photocraft-cli", "xtask"]
 
 [workspace.package]
 version = "0.12.0"

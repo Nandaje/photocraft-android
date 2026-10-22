@@ -1,0 +1,166 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="ai.storyteller.photocraft"
+4    android:versionCode="1200"
+5    android:versionName="0.12.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- File & Media Storage Permissions for Import and Export -->
+12    <!-- Android 8–12L (API 26–32): shared storage read access -->
+13    <uses-permission
+13-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:8:5-10:38
+14        android:name="android.permission.READ_EXTERNAL_STORAGE"
+14-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:9:9-64
+15        android:maxSdkVersion="32" />
+15-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:10:9-35
+16    <!-- Android 8–10 (API 26–29): direct shared storage write access -->
+17    <uses-permission
+17-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:12:5-14:38
+18        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+18-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:13:9-65
+19        android:maxSdkVersion="29" />
+19-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:14:9-35
+20    <!-- Android 13+ (API 33+): granular media image access -->
+21    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+21-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:16:5-76
+21-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:16:22-73
+22    <!-- Android 11+ (API 30+): All Files Access for project folders (.pcraft, .psd, .psb, linked smart objects, brush libraries) -->
+23    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+23-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:18:5-20:40
+23-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:19:9-66
+24
+25    <!-- Hardware GPU Acceleration: Vulkan 1.1+ preferred, OpenGL ES 3.0+ fallback -->
+26    <uses-feature
+26-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:23:5-25:35
+27        android:glEsVersion="0x00030000"
+27-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:24:9-41
+28        android:required="true" />
+28-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:25:9-32
+29    <uses-feature
+29-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:26:5-29:36
+30        android:name="android.hardware.vulkan.level"
+30-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:27:9-53
+31        android:required="false"
+31-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:29:9-33
+32        android:version="0" />
+32-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:28:9-28
+33    <uses-feature
+33-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:30:5-33:36
+34        android:name="android.hardware.vulkan.version"
+34-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:31:9-55
+35        android:required="false"
+35-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:33:9-33
+36        android:version="0x401000" />
+36-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:32:9-35
+37    <uses-feature
+37-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:34:5-36:36
+38        android:name="android.hardware.touchscreen"
+38-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:35:9-52
+39        android:required="false" />
+39-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:36:9-33
+40
+41    <application
+41-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:38:5-84:19
+42        android:allowBackup="true"
+42-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:44:9-35
+43        android:extractNativeLibs="false"
+44        android:hardwareAccelerated="true"
+44-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:40:9-43
+45        android:label="PhotoCraft"
+45-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:39:9-35
+46        android:largeHeap="true"
+46-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:41:9-33
+47        android:preserveLegacyExternalStorage="true"
+47-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:43:9-53
+48        android:requestLegacyExternalStorage="true"
+48-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:42:9-52
+49        android:supportsRtl="true"
+49-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:45:9-35
+50        android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" >
+50-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:46:9-82
+51        <activity
+51-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:48:9-83:20
+52            android:name="ai.storyteller.photocraft.MainActivity"
+52-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:49:13-41
+53            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboardHidden|keyboard|navigation|uiMode|density"
+53-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:54:13-141
+54            android:exported="true"
+54-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:51:13-36
+55            android:hardwareAccelerated="true"
+55-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:52:13-47
+56            android:label="PhotoCraft"
+56-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:50:13-39
+57            android:launchMode="singleTask" >
+57-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:53:13-44
+58            <meta-data
+58-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:56:13-58:54
+59                android:name="android.app.lib_name"
+59-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:57:17-52
+60                android:value="photocraft_android" />
+60-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:58:17-51
+61
+62            <intent-filter>
+62-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:60:13-63:29
+63                <action android:name="android.intent.action.MAIN" />
+63-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:61:17-69
+63-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:61:25-66
+64
+65                <category android:name="android.intent.category.LAUNCHER" />
+65-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:62:17-77
+65-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:62:27-74
+66            </intent-filter>
+67
+68            <!-- Open/Edit image and document files from Android Files / Gallery / Share sheet -->
+69            <intent-filter>
+69-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:66:13-76:29
+70                <action android:name="android.intent.action.VIEW" />
+70-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:67:17-69
+70-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:67:25-66
+71                <action android:name="android.intent.action.EDIT" />
+71-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:68:17-69
+71-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:68:25-66
+72
+73                <category android:name="android.intent.category.DEFAULT" />
+73-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:69:17-76
+73-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:69:27-73
+74                <category android:name="android.intent.category.BROWSABLE" />
+74-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:70:17-78
+74-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:70:27-75
+75
+76                <data android:mimeType="image/*" />
+76-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:71:17-52
+76-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:71:23-49
+77                <data android:mimeType="application/vnd.adobe.photoshop" />
+77-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:71:17-52
+77-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:71:23-49
+78                <data android:mimeType="image/vnd.adobe.photoshop" />
+78-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:71:17-52
+78-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:71:23-49
+79                <data android:mimeType="image/openraster" />
+79-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:71:17-52
+79-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:71:23-49
+80                <data android:mimeType="application/x-krita" />
+80-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:71:17-52
+80-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:71:23-49
+81            </intent-filter>
+82            <intent-filter>
+82-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:78:13-82:29
+83                <action android:name="android.intent.action.SEND" />
+83-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:79:17-69
+83-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:79:25-66
+84
+85                <category android:name="android.intent.category.DEFAULT" />
+85-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:69:17-76
+85-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:69:27-73
+86
+87                <data android:mimeType="image/*" />
+87-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:71:17-52
+87-->C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\AndroidManifest.xml:71:23-49
+88            </intent-filter>
+89        </activity>
+90    </application>
+91
+92</manifest>

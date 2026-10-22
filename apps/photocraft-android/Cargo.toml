@@ -1,0 +1,46 @@
+[package]
+name = "photocraft-android"
+description = "PhotoCraft on Android (wgpu Vulkan/GLES hardware acceleration, SAF + runtime storage permissions for import/export)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[lib]
+name = "photocraft_android"
+crate-type = ["cdylib", "rlib"]
+
+[features]
+# Open HEIC/HEIF photos (the optional photocraft-heif crate).
+heif = ["photocraft-codecs/heif"]
+
+# Only the Android JNI/Activity entrypoint (`android_entry.rs`) uses `#[unsafe(no_mangle)]` and JNI
+# pointers; every other module in this crate is 100% safe Rust.
+[lints.rust]
+unsafe_code = "deny"
+
+[lints.clippy]
+dbg_macro = "warn"
+todo = "warn"
+
+[dependencies]
+photocraft-doc = { workspace = true }
+photocraft-color = { workspace = true }
+photocraft-raster = { workspace = true }
+photocraft-geom = { workspace = true }
+photocraft-compose = { workspace = true }
+photocraft-engine = { workspace = true }
+photocraft-codecs = { workspace = true }
+photocraft-io = { workspace = true }
+photocraft-format = { workspace = true }
+photocraft-ui-egui = { workspace = true }
+eframe = { workspace = true, features = ["wgpu", "persistence"] }
+egui = { workspace = true }
+serde_json = { workspace = true }
+log = { workspace = true }
+
+[target.'cfg(target_os = "android")'.dependencies]
+eframe = { workspace = true, features = ["wgpu", "android-native-activity", "persistence"] }
+android-activity = { version = "=0.6.1", default-features = false, features = ["native-activity"] }
+jni = "=0.22.4"
+ndk = { version = "=0.9.0", default-features = false }

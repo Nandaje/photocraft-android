@@ -1471,7 +1471,7 @@ fn detect_physical_memory() -> Option<u64> {
     String::from_utf8(out.stdout).ok()?.trim().parse().ok()
 }
 
-#[cfg(target_os = "linux")]
+#[cfg(any(target_os = "linux", target_os = "android"))]
 fn detect_physical_memory() -> Option<u64> {
     let info = std::fs::read_to_string("/proc/meminfo").ok()?;
     let kb: u64 = info.lines().find_map(|l| l.strip_prefix("MemTotal:"))?.trim().trim_end_matches("kB").trim().parse().ok()?;
@@ -1489,7 +1489,7 @@ fn detect_physical_memory() -> Option<u64> {
     winsafe::GlobalMemoryStatusEx().map(|m| m.ullTotalPhys).ok().filter(|b| *b > 0)
 }
 
-#[cfg(not(any(target_os = "macos", target_os = "linux", target_os = "freebsd", windows)))]
+#[cfg(not(any(target_os = "macos", target_os = "linux", target_os = "android", target_os = "freebsd", windows)))]
 fn detect_physical_memory() -> Option<u64> {
     None
 }

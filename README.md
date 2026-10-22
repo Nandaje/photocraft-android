@@ -382,6 +382,18 @@ RISC-V (riscv64): `photocraft-<ver>-linux-riscv64.tar.gz` only, built against Ub
 |---|---|---|
 | Static site | `photocraft-web-<ver>.zip` | Runs in a modern browser; host it on any static server |
 
+### Android
+
+| Build | File | Notes |
+|---|---|---|
+| Android APK (`arm64-v8a`) | [`photocraft-android-v0.12.0-arm64-v8a.apk`](https://github.com/Nandaje/photocraft-android/releases/download/v0.12.0-android/photocraft-android-v0.12.0-arm64-v8a.apk) | Hardware GPU acceleration (`wgpu` Vulkan 1.1+ / OpenGL ES 3.0+) + runtime file permissions & SAF for import/export (`packaging/android/`) |
+
+## Contributors (Android Port)
+
+- **[Google Gemini 4 Antigravity](https://antigravity.google)** ([`@google-gemini`](https://github.com/google-gemini) · [`@google-antigravity`](https://github.com/google-antigravity)) — Android native port (`apps/photocraft-android`), `wgpu` Vulkan 1.1+ / OpenGL ES 3.0+ GPU acceleration & crash-safe fallback, Android runtime storage permissions (`READ_EXTERNAL_STORAGE`, `WRITE_EXTERNAL_STORAGE`, `READ_MEDIA_IMAGES`, `MANAGE_EXTERNAL_STORAGE`), Storage Access Framework (SAF) & touch file manager integration, and APK packaging.
+- **[Nandaje](https://github.com/Nandaje)** — Project maintainer & Android release distribution.
+- **[ArtCraft / Storytold Team](https://github.com/storytold/photocraft)** — Original PhotoCraft engine and desktop/web application.
+
 ## The Crafting Apps
 
 PhotoCraft is one of the **Crafting Apps**: free, open-source creative tools from the

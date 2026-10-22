@@ -4705,6 +4705,29 @@ dependencies = [
 ]
 
 [[package]]
+name = "photocraft-android"
+version = "0.12.0"
+dependencies = [
+ "android-activity",
+ "eframe",
+ "egui",
+ "jni",
+ "log",
+ "ndk",
+ "photocraft-codecs",
+ "photocraft-color",
+ "photocraft-compose",
+ "photocraft-doc",
+ "photocraft-engine",
+ "photocraft-format",
+ "photocraft-geom",
+ "photocraft-io",
+ "photocraft-raster",
+ "photocraft-ui-egui",
+ "serde_json",
+]
+
+[[package]]
 name = "photocraft-automation"
 version = "0.12.0"
 dependencies = [

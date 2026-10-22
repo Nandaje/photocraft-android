@@ -1,0 +1,7 @@
+ai.storyteller.photocraft.app-pngs-0 C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\build\generated\res\pngs\release
+ai.storyteller.photocraft.app-resValues-1 C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\build\generated\res\resValues\release
+ai.storyteller.photocraft.app-packageReleaseResources-2 C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+ai.storyteller.photocraft.app-packageReleaseResources-3 C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+ai.storyteller.photocraft.app-release-4 C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\build\intermediates\merged_res\release\mergeReleaseResources
+ai.storyteller.photocraft.app-main-5 C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\main\res
+ai.storyteller.photocraft.app-release-6 C:\Users\MNCTV\Documents\AntigravityProj\photocraft-android\packaging\android\app\src\release\res
