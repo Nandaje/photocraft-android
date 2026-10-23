@@ -136,8 +136,8 @@ pub fn android_services() -> Services {
     let inbox = global_inbox();
     let place_inbox = global_place_inbox();
     Services {
-        import: Some(Box::new(|name: &str, bytes: &[u8], max_svg_group_depth: usize| {
-            photocraft_io::import_with_svg_group_depth(name, bytes, max_svg_group_depth)
+        import: Some(Box::new(|name: &str, bytes: &[u8], opts: &photocraft_io::ImportOptions| {
+            photocraft_io::import_with_options(name, bytes, opts)
                 .map(|r| (r.document, r.warnings))
                 .map_err(|e| e.to_string())
         })),
