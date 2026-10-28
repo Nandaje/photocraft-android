@@ -214,7 +214,7 @@ mod tests {
         assert!(out_path.is_file(), "exported PNG should be written to Download directory");
 
         let read_back = std::fs::read(&out_path).unwrap();
-        let (imported, _) = (svcs.import.as_ref().ok_or("no import").unwrap())("android_export.png", &read_back, 64).unwrap();
+        let (imported, _) = (svcs.import.as_ref().ok_or("no import").unwrap())("android_export.png", &read_back, &photocraft_io::ImportOptions::default()).unwrap();
         assert_eq!(imported.size, Size::new(16, 16));
 
         let _ = std::fs::remove_dir_all(&dir);

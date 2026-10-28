@@ -20,8 +20,8 @@ use crate::permissions::{self, AndroidDirs};
 /// All file extensions supported by PhotoCraft File › Open.
 pub const OPEN_EXTS: &[&str] = &[
     "pcraft", "pdn", "ora", "xcf", "xcfgz", "gz", "kra", "krz", "psd", "psb", "psdt", "png", "jpg", "jpeg", "tif", "tiff", "webp", "gif", "bmp", "tga", "ico",
-    "qoi", "exr", "hdr", "pbm", "pgm", "ppm", "pam", "pfm", "pcx", "dds", "xpm", "fits", "fit", "fts", "dpx", "cin", "heic", "heif", "hif", "dng", "cr2",
-    "cr3", "nef", "nrw", "arw", "pef", "orf", "rw2", "raf", "abr", "grd", "svg", "svgz", "aco", "act", "ase", "kys", "af", "afdesign", "afphoto", "afpub",
+    "qoi", "exr", "hdr", "pbm", "pgm", "ppm", "pam", "pfm", "pcx", "dds", "xpm", "fits", "fit", "fts", "dpx", "cin", "dcm", "dicom", "dc3", "iff", "lbm", "ilbm", "heic", "heif", "hif", "dng", "cr2",
+    "cr3", "nef", "nrw", "arw", "pef", "orf", "rw2", "raf", "abr", "grd", "asl", "svg", "svgz", "aco", "act", "ase", "kys", "af", "afdesign", "afphoto", "afpub",
 ];
 
 /// Save As / Export formats offered in the Android Save dialog.
@@ -283,7 +283,7 @@ pub fn render_modal(ctx: &egui::Context) {
     let mut finish_answer: Option<Option<FileDialogAnswer>> = None;
 
     egui::Window::new(title)
-        .id(egui::Id::new("android_file_dialog_modal"))
+        .id(egui::Id::unique("android_file_dialog_modal"))
         .collapsible(false)
         .resizable(true)
         .default_size([720.0, 480.0])

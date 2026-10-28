@@ -6,14 +6,14 @@ plugins {
 android {
     namespace = "ai.storyteller.photocraft"
     compileSdk = 34
-    ndkVersion = "27.0.12077973"
+    ndkVersion = "26.1.10909125"
 
     defaultConfig {
         applicationId = "ai.storyteller.photocraft"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1400
-        versionName = "0.14.0"
+        versionCode = 1600
+        versionName = "0.16.0"
 
         ndk {
             abiFilters += listOf("arm64-v8a")
