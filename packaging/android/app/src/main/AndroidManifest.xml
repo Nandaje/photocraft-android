@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="ai.storyteller.photocraft">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!-- File & Media Storage Permissions for Import and Export -->
     <!-- Android 8–12L (API 26–32): shared storage read access -->
@@ -37,6 +36,8 @@
 
     <application
         android:label="PhotoCraft"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:hardwareAccelerated="true"
         android:largeHeap="true"
         android:requestLegacyExternalStorage="true"
