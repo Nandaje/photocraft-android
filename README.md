@@ -390,7 +390,7 @@ RISC-V (riscv64): `photocraft-<ver>-linux-riscv64.tar.gz` only, built against Ub
 
 | Build | File | Notes |
 |---|---|---|
-| Android APK (`arm64-v8a`) | [`photocraft-android-v0.16.0-arm64-v8a.apk`](https://github.com/Nandaje/photocraft-android/releases/download/v0.16.0-android/photocraft-android-v0.16.0-arm64-v8a.apk) | Hardware GPU acceleration (`wgpu` Vulkan 1.1+ / OpenGL ES 3.0+) + runtime file permissions & SAF for import/export (`packaging/android/`) |
+| Android APK (`arm64-v8a`) | [`photocraft-android-v0.17.0-arm64-v8a.apk`](https://github.com/Nandaje/photocraft-android/releases/download/v0.17.0-android/photocraft-android-v0.17.0-arm64-v8a.apk) | Hardware GPU acceleration (`wgpu` Vulkan 1.1+ / OpenGL ES 3.0+) + runtime file permissions & SAF for import/export (`packaging/android/`) |
 
 ## Contributors (Android Port)
 

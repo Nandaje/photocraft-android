@@ -12,8 +12,8 @@ android {
         applicationId = "ai.storyteller.photocraft"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1600
-        versionName = "0.16.0"
+        versionCode = 1700
+        versionName = "0.17.0"
 
         ndk {
             abiFilters += listOf("arm64-v8a")
